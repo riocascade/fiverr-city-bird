@@ -3007,6 +3007,8 @@ VectorY(){return this._GetVectorY()},JumpSustain(){return this._GetJumpSustain()
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.System.Acts.SetLayerVisible,
+		C3.Plugins.Audio.Cnds.IsTagPlaying,
+		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Arr.Cnds.IsEmpty,
 		C3.Plugins.Arr.Acts.SetSize,
 		C3.Plugins.Arr.Acts.Push,
@@ -3052,7 +3054,6 @@ VectorY(){return this._GetVectorY()},JumpSustain(){return this._GetJumpSustain()
 		C3.Plugins.NinePatch.Cnds.CompareX,
 		C3.Plugins.NinePatch.Acts.Destroy,
 		C3.Plugins.System.Acts.AddVar,
-		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.System.Cnds.Else,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Sprite.Cnds.CompareY,
@@ -3242,11 +3243,11 @@ VectorY(){return this._GetVectorY()},JumpSustain(){return this._GetJumpSustain()
 
 	self.C3_ExpressionFuncs = [
 		() => 1000,
-		() => "bgm",
 		() => "settings",
+		() => "bgm",
+		() => 1,
 		() => 0,
 		() => 2,
-		() => 1,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 1);
